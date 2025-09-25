@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujos - El Mundo del Arte</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo de la sección de bienvenida */
+
+
+
+    .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* espacio entre bloques */
+            justify-content: center;
+        }
+
+    .gallery .item {
+            width: 280px; /* 🔹 tamaño fijo para todos los bloques */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+    .gallery .item img {
+            width: 100%;
+            height: 180px;  /* 🔹 altura fija para que todas las imágenes se vean parejas */
+            object-fit: cover; /* 🔹 recorta o ajusta sin deformar */
+            border-radius: 12px;
+        }
+
+        
+        .welcome {
+            padding: 30px;
+            background-color: #fdfdfd;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .welcome:hover {
+            background-color: #f4f4f4;
+        }
+        .welcome h2 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            font-family: 'Verdana', sans-serif;
+        }
+        .welcome p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #34495e;
+            font-family: 'Georgia', serif;
+        }
+        .welcome img {
+            border-radius: 12px;
+            margin-top: 20px;
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+            height: auto;
+        }
+        .welcome img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+        .menu-toggle {
+            display: none;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: #f0e68c;
+            transform: scale(1.1);
+        }
+
+        /* Botón flotante */
+        #feedbackBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 9999;
+        }
+        #feedbackPanel {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background: white;
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            padding: 15px;
+            display: none;
+            z-index: 9998;
+        }
+        #feedbackPanel h3 {
+            margin-top: 0;
+            color: #2a2a72;
+        }
+        .stars {
+            display: flex;
+            gap: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .stars span {
+            color: gray;
+        }
+        .stars span.selected {
+            color: gold;
+        }
+        textarea {
+            width: 100%;
+            resize: none;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+        .send-btn {
+            background: #2a2a72;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .send-btn:hover {
+            background: #3c3cd0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MATCOHIS</h1>
+    </header>
+    <nav>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a href="index.html">Inicio</a>
+        <a href="#">Matemática</a>
+        <a href="comunicacion.html">Comunicación</a>
+        <a href="historia.html">Historia</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <!-- 🔹 Aquí va el bloque que pediste -->
+    <div class="bloques">
+      <a href="aritmetica.html"></a>
+      <a href="geometria.html"></a>
+      <a href="razonamiento.html"></a>
+    </div>
+    <!-- 🔹 Fin del bloque -->
+
+    <main>
+        <h2>Nivel Básico</h2>
+        <div class="gallery">
+            <!-- Juego de Aritmética -->
+            <div class="item" style="text-align: center; margin-bottom: 20px;">
+                <a href="aritmetica.html">
+                    <img src="img/img200.jpg" alt="Haz clic para jugar" style="max-width: 100%; height: auto; border-radius: 12px;">
+                </a>
+                <p>
+                    <strong>ARITMÉTICA</strong><br>
+                    <strong>Tema:</strong> <a href="aritmetica.html" style="text-decoration: none; color: #2a2a72;">Sumas y restas con números naturales grandes</a>
+                </p>
+            </div>
+            <!-- Juego de Geometría -->
+            <div class="item" style="text-align: center; margin-bottom: 20px;">
+                <a href="geometria.html">
+                    <img src="img/img204.jpg" alt="Haz clic para jugar" style="max-width: 100%; height: auto; border-radius: 12px;">
+                </a>
+                <p>
+                    <strong>GEOMETRÍA</strong><br>
+                    <strong>Tema:</strong> <a href="geometria.html" style="text-decoration: none; color: #2a2a72;">Perímetros</a>
+                </p>
+            </div>
+            <!-- Juego de Razonamiento Matemático -->
+            <div class="item" style="text-align: center; margin-bottom: 20px;">
+                <a href="razonamiento.html">
+                    <img src="img/img218.jpg" alt="Haz clic para jugar" style="max-width: 100%; height: auto; border-radius: 12px;">
+                </a>
+                <p>
+                    <strong>RAZONAMIENTO MATEMÁTICO</strong><br>
+                    <strong>Tema:</strong> <a href="razonamiento.html" style="text-decoration: none; color: #2a2a72;">Series numéricas con operaciones combinadas</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Los demás niveles siguen igual, solo quité target="_blank" -->
+    <main>
+        <h2>Nivel Intermedio</h2>
+        <div class="gallery">
+            <div class="item" style="text-align: center; margin-bottom: 20px;">
+                <a href="aritmetica_intermedio.html">
+                    <img src="img/img217.jpg" alt="Haz clic para jugar" style="max-width: 100%; height: auto; border-radius: 12px;">
+                </a>
+                <p>
+                    <strong>ARITMÉTICA</strong><br>
+                    <strong>Tema:</strong> <a href="aritmetica_intermedio.html" style="text-decoration: none; color: #2a2a72;">Multiplicación y división con números de varias cifras</a>
+                </p>
+            </div>
+            <div class="item" style="text-align: center; margin-bottom: 20px;">
+                <a href="geometria_intermedio.html">
+                    <img src="img/img203.png" alt="Haz clic para jugar" style="max-width: 100%; height: auto; border-radius: 12px;">
+                </a>
+                <p>
+                    <strong>GEOMETRÍA</strong><br>
+                    <strong>Tema:</strong> <a href="geometria_intermedio.html" style="text-decoration: none; color: #2a2a72;">Áreas</a>
+                </p>
+            </div>
+            <div class="item" style="text-align: center; margin-bottom: 20px;">
+                <a href="razonamiento_intermedio.html">
+                    <img src="img/img232.PNG" alt="Haz clic para jugar" style="max-width: 100%; height: auto; border-radius: 12px;">
+                </a>
+                <p>
+                    <strong>RAZONAMIENTO MATEMÁTICO</strong><br>
+                    <strong>Tema:</strong> <a href="razonamiento_intermedio.html" style="text-decoration: none; color: #2a2a72;">Proporcionalidad</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <main>
+        <h2>Nivel Avanzado</h2>
+        <div class="gallery">
+            <div class="item" style="text-align: center; margin-bottom: 20px;">
+                <a href="aritmetica_avanzado.html">
+                    <img src="img/img233.PNG" alt="Haz clic para jugar" style="max-width: 100%; height: auto; border-radius: 12px;">
+                </a>
+                <p>
+                    <strong>ARITMÉTICA</strong><br>
+                    <strong>Tema:</strong> <a href="aritmetica_avanzado.html" style="text-decoration: none; color: #2a2a72;">Operaciones con fracciones</a>
+                </p>
+            </div>
+            <div class="item" style="text-align: center; margin-bottom: 20px;">
+                <a href="geometria_avanzado.html">
+                    <img src="img/img205.png" alt="Haz clic para jugar" style="max-width: 100%; height: auto; border-radius: 12px;">
+                </a>
+                <p>
+                    <strong>GEOMETRÍA</strong><br>
+                    <strong>Tema:</strong> <a href="geometria_avanzado.html" style="text-decoration: none; color: #2a2a72;">Volumen</a>
+                </p>
+            </div>
+            <div class="item" style="text-align: center; margin-bottom: 20px;">
+                <a href="razonamiento_avanzado.html">
+                    <img src="img/img234.PNG" alt="Haz clic para jugar" style="max-width: 100%; height: auto; border-radius: 12px;">
+                </a>
+                <p>
+                    <strong>RAZONAMIENTO MATEMÁTICO</strong><br>
+                    <strong>Tema:</strong> <a href="razonamiento_avanzado.html" style="text-decoration: none; color: #2a2a72;">Problemas de deducción</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mentes poderosas en acción - Sistema MATCOHIS | Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante -->
+    <button id="feedbackBtn">💬</button>
+
+    <!-- Panel de comentarios -->
+    <div id="feedbackPanel">
+        <h3>Tu opinión</h3>
+        <div class="stars" id="starContainer">
+            <span data-value="1">★</span>
+            <span data-value="2">★</span>
+            <span data-value="3">★</span>
+            <span data-value="4">★</span>
+            <span data-value="5">★</span>
+        </div>
+        <textarea placeholder="Escribe tu comentario aquí..."></textarea>
+        <button class="send-btn">Enviar</button>
+    </div>
+
+    <script>
+        const feedbackBtn = document.getElementById('feedbackBtn');
+        const feedbackPanel = document.getElementById('feedbackPanel');
+        const stars = document.querySelectorAll('#starContainer span');
+
+        let rating = 0;
+
+        feedbackBtn.addEventListener('click', () => {
+            feedbackPanel.style.display = feedbackPanel.style.display === 'block' ? 'none' : 'block';
+        });
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                rating = parseInt(star.getAttribute('data-value'));
+                stars.forEach(s => s.classList.remove('selected'));
+                for (let i = 0; i < rating; i++) {
+                    stars[i].classList.add('selected');
+                }
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
